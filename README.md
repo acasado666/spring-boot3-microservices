@@ -24,6 +24,31 @@ To resolve this issue:
     Add changes to git using this command: git add .
 	Commit changes using this command: git commit -m "some message"
 
+## **Spring Data REST** employes **HAL** to associate resource objects to another.
+**REATFul HATEOAS**
+
+Whithout Controller, because of Spring Data REST dependency -> RESTful Uniformed Interface
+RESTful API does more than expose endpoints over Http.
+
+One of his constraints for a uniform interface is followed when hypermedia as an engine of 
+application state, or HATEOAS, is employed. 
+
+Spring Data REST employs hypermedia application language, or HAL standard to associate resource objects to one another.
+
+It should also expose API's documentation and automatically provide navigation between resources. 
+Hypermedia-driven APIs accomplish just that.
+
+| Spring Data REST employs **HAL** to associate resource objects to  another. <br/>**RESTFul HATEOAS**                                                                                                              |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET /tours/{id} -> returns the tour details<br/> `http://localhost:8080/tours/1`                                                                                                                                  |
+| GET /tours -> returns a list of All tours <br/>`http://localhost:8080/tours`                                                                                                                                      |
+| GET /tours/search -> returns a list of all tours<br/> `http://localhost:8080/tours/search` <br/>-> returns LINKS to a list of all tours for a difficulty<br/>-> returns LINKS of all tours for a tour packageCode |
+| GET /tours/search/findByDifficulty{?diff} -> returns a list of all tours for a difficulty for a difficulty`http://localhost:8080/tours/search/findByDifficulty?diff=Easy`                                         | 
+| GET /tours/search/findByTourPackageCode{?Code} -> returns a list of all tours for a tour package <br/>`http://localhost:8080/tours/search/findByTourPackageCode?code=BC`}`                                        
+| GET /tours/{id}/tourPackages/{id} -> returns for tour 1, tour package BC "Backpack Cal"<br/> `http://localhost:8080/tours/1/tourPackage/BC`                                                                       |                                                                                                                                                                                              |
+| GET /tours/{id}/tourPackages/search/findByName <br/>`http://localhost:8080/tours/1/tourPackage/findByName`                                                                                                        |
+| GET /tours/{id}/tourPackages/search/findByName{?name} <br/>`http://localhost:8080/tours/1/tourPackage/findByName?name=Backpack%20Cal`                                                                             |
+
  ### Instructor
 
 Mary Ellen Bowman

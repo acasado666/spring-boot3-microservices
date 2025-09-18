@@ -18,7 +18,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootApplication
 public class ExplorecaliJpaApplication implements CommandLineRunner {
-    private final String TOUR_IMPORT_FILE = "ExploreCalifornia.json";
+//    private final String TOUR_IMPORT_FILE = "ExploreCalifornia.json";
+        private final String TOUR_IMPORT_FILE = "explorecali-jpa/ExploreCalifornia.json";
+
 
     @Autowired
     private TourPackageService tourPackageService;
