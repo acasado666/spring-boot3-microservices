@@ -19,6 +19,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @SpringBootApplication
 public class ExplorecaliJpaApplication implements CommandLineRunner {
     private final String TOUR_IMPORT_FILE = "ExploreCalifornia.json";
+//    private final String TOUR_IMPORT_FILE = "explorecali-jpa/ExploreCalifornia.json";
 
     @Autowired
     private TourPackageService tourPackageService;
@@ -44,6 +45,12 @@ public class ExplorecaliJpaApplication implements CommandLineRunner {
 
         System.out.println("\n\nBackpack Cali Tours");
         tourService.lookupByPackage("BC").forEach(System.out::println);
+
+        System.out.println("\n\nBackpack Cali Tours By Region " + Region.Central_Coast);
+        tourService.lookupByRegion(Region.Central_Coast).forEach(System.out::println);
+
+        System.out.println("\n\nBackpack Cali Tours By Title");
+        tourService.lookupByTitle("Big Sur Retreat").forEach(System.out::println);
     }
 
     /**
@@ -60,6 +67,7 @@ public class ExplorecaliJpaApplication implements CommandLineRunner {
      * Initialize all the known tour packages
      */
     private void createTourAllPackages() {
+        tourPackageService.createTourPackage("AC", "AC22");
         tourPackageService.createTourPackage("BC", "Backpack Cal");
         tourPackageService.createTourPackage("CC", "California Calm");
         tourPackageService.createTourPackage("CH", "California Hot springs");
