@@ -23,16 +23,17 @@ To resolve this issue:
 	
     Add changes to git using this command: git add .
 	Commit changes using this command: git commit -m "some message"
-## **Spring Data REST** employes **HAL** to associate resource objects to another.
-**REATFul HATEOAS**
+
+ 
+## **Spring Data REST** uses **HAL** to associate resource objects to another.
+**RESTFul HATEOAS**
 
 Whithout Controller, because of Spring Data REST dependency -> RESTful Uniformed Interface
 RESTful API does more than expose endpoints over Http.
 
-One of his constraints for a uniform interface is followed when hypermedia as an engine of 
-application state, or HATEOAS, is employed. 
+One of his constraints for a uniform interface is followed when Hypermedia As The Engine Of Application State (HATEOAS) is employed. 
 
-Spring Data REST employs hypermedia application language, or HAL standard to associate resource objects to one another.
+Spring Data REST employs Hypermedia Application Language, or HAL standard to associate resource objects to one another.
 
 It should also expose API's documentation and automatically provide navigation between resources. 
 Hypermedia-driven APIs accomplish just that.
