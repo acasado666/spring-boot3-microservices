@@ -58,19 +58,18 @@ Mary Ellen Bowman
 
 Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/mary-ellen-bowman?u=104).
 
-![Alt text](img/GET_mappings.JPG "GET Mappings")
 
-![Alt text](img/GET_SearchQuery_methods.JPG "Search Query methods")
+![Alt text](../img/GET_mappings.JPG "GET Mappings")
 
-![Alt text](/img/POST_methods.JPG "POST methods")
+![Alt text](../img/GET_SearchQuery_methods.JPG "Search Query methods")
 
-![Alt text](/img/PUT_and_PATCH_methods.JPG" "PUT PATCH methods")
+![Alt text](../img/POST_methods.JPG "POST methods")
 
-![Alt text](</img height="100" src="img/PUT_and_PATCH_methods.JPG" title="PUT and PATCH methods" width="100"/>)
+![Alt text](/img/PUT_and_PATCH_methods.JPG "PUT PATCH methods")
 
-![Alt text](img/DELETE mappings.JPG "Delete methods")
+![Alt text](../img/DELETE mappings.JPG "Delete methods")
 
-![Alt text](img/Hypermedia.JPG "Hypermedia")
+![Alt text](../img/Hypermedia.JPG "Hypermedia")
 
 
 [0]: # (Replace these placeholder URLs with actual course URLs)

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import com.example.explorecalijpa.model.ShowTourProjection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -46,6 +47,16 @@ public class ExplorecaliJpaApplication implements CommandLineRunner {
 
         System.out.println("\n\nBackpack Cali Tours");
         tourService.lookupByPackage("BC").forEach(System.out::println);
+
+        System.out.println("\n\nBackpack Cali Tours Projection");
+        tourService.lookupByProjection(Difficulty.Easy, 750);
+        var showTourProjection = tourService.lookupByProjection(Difficulty.Easy, 750).get();
+        System.out.println(showTourProjection.getDifficulty());
+        System.out.println(showTourProjection.getPrice());
+        System.out.println(showTourProjection.projectionToString());
+
+//        System.out.println("\n\nBackpack Cali Tours Projection First");
+//        tourService.findNameProjectionFirst("BC");
     }
 
     /**
